@@ -1,9 +1,15 @@
 using Shared.Instrastructure.Controllers;
 using Module.User;
+using System.Reflection;
+using System.Runtime.Loader;
+using HeyTom.Web.Core;
+using Module.User.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddUserContext(builder.Configuration);
+builder.Services.AddUserContext(builder.Configuration)
+    .AddInject(AssemblyLoadContext.Default.LoadFromAssemblyName(new AssemblyName("Module.User.Application")), AssemblyLoadContext.Default.LoadFromAssemblyName(new AssemblyName("Module.User.Infrastructure")));
 
 builder.Services.AddControllers()
            .ConfigureApplicationPartManager(manager =>

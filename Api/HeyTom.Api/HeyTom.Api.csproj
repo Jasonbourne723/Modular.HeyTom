@@ -18,19 +18,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\HeyTom.Web.Core\HeyTom.Web.Core.csproj" />
-    <ProjectReference Include="..\..\Module.User\Module.User.csproj" />
+    <ProjectReference Include="..\..\Modules\Module.User.Infrastructure\Module.User.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Module.User\Module.User.csproj" />
+    <ProjectReference Include="..\..\Shared\HeyTom.Web.Core\HeyTom.Web.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="DB\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="DB\HeyTome.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

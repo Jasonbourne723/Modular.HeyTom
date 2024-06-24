@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Module.User.Domain\Module.User.Domain.csproj" />
-    <ProjectReference Include="..\Shared.Instrastructure\Shared.Instrastructure.csproj" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Module.User.Infrastructure\Module.User.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
